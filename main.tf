@@ -116,9 +116,9 @@ resource "aws_iam_role_policy" "app_s3_access" {
   policy = jsonencode({
     Version = "2012-10-17"
     Statement = [{
-      Sid      = "AllowAppBucketReadWrite"
-      Effect   = "Allow"
-      Action   = ["s3:GetObject", "s3:PutObject", "s3:ListBucket"]
+      Sid    = "AllowAppBucketReadWrite"
+      Effect = "Allow"
+      Action = ["s3:GetObject", "s3:PutObject", "s3:ListBucket"]
       Resource = [
         aws_s3_bucket.app_data.arn,
         "${aws_s3_bucket.app_data.arn}/*"

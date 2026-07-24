@@ -11,7 +11,7 @@ variable "project_tag" {
     kente-staging-infra-spec.md, section 6). No default on purpose -- pick your own
     before running plan/apply.
   EOT
-  type = string
+  type        = string
 }
 
 variable "vpc_cidr" {
@@ -38,7 +38,7 @@ variable "allowed_ssh_cidr" {
     IP or range you control -- NEVER 0.0.0.0/0 (spec section 4; this is the first
     thing the grading script checks).
   EOT
-  type = string
+  type        = string
   # Deliberately not a real reachable range -- replace with your own IP/CIDR
   # before applying. Left non-empty so `terraform validate` passes out of the box.
   default = "203.0.113.0/24"
@@ -50,7 +50,7 @@ variable "ami_id" {
     own region -- do not copy one from someone else's region/account, it likely
     won't exist there.
   EOT
-  type = string
+  type        = string
 }
 
 variable "instance_type" {
