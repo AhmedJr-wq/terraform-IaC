@@ -1,0 +1,9 @@
+# Copy this file to terraform.tfvars and fill in real values -- terraform.tfvars
+# is gitignored on purpose (it can end up holding account-specific values you
+# don't want in a commit history).
+
+aws_region    = "us-east-1"
+project_tag   = "kente-iac-<your-id>" # e.g. kente-iac-jdoe -- see infra spec section 6
+allowed_ssh_cidr = "203.0.113.42/32"  # replace with YOUR IP or the class network's, never 0.0.0.0/0
+ami_id        = "ami-0xxxxxxxxxxxxxxxx" # look up a current Amazon Linux 2023 AMI for your region
+instance_type = "t3.micro"
