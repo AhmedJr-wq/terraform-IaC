@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "AWS region to provision the Kente Retail staging stack in."
   type        = string
-  default     = "us-east-1"
+  default     = "eu-west-1"
 }
 
 variable "project_tag" {
@@ -29,7 +29,7 @@ variable "public_subnet_cidr" {
 variable "availability_zone" {
   description = "Availability zone for the public subnet."
   type        = string
-  default     = "us-east-1a"
+  default     = "eu-west-1a"
 }
 
 variable "allowed_ssh_cidr" {
@@ -51,6 +51,7 @@ variable "ami_id" {
     won't exist there.
   EOT
   type        = string
+  default     = "ami-031dc9fa0b852ed15"
 }
 
 variable "instance_type" {
